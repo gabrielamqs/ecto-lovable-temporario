@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Search, Heart, ShoppingBag, Menu, X, User, ChevronDown } from "lucide-react";
+import { Search, ShoppingBag, Menu, X, User, ChevronDown } from "lucide-react";
 import { navigationData } from "@/data/navigation";
 import { MobileMenu } from "./MobileMenu";
 import { DesktopDropdown } from "./DesktopDropdown";
@@ -46,11 +46,8 @@ const Header = () => {
           <button aria-label="Buscar" className="p-1.5 hover:opacity-70 transition-opacity">
             <Search className="w-[18px] h-[18px]" />
           </button>
-          <Link to="/conta" aria-label="Minha Conta" className="hidden md:block p-1.5 hover:opacity-70 transition-opacity">
+          <Link to="/conta" aria-label="Minha Conta" className="p-1.5 hover:opacity-70 transition-opacity">
             <User className="w-[18px] h-[18px]" />
-          </Link>
-          <Link to="/conta/desejos" aria-label="Lista de Desejos" className="p-1.5 hover:opacity-70 transition-opacity">
-            <Heart className="w-[18px] h-[18px]" />
           </Link>
           <button onClick={() => setIsOpen(true)} aria-label="Sacola" className="p-1.5 hover:opacity-70 transition-opacity relative">
             <ShoppingBag className="w-[18px] h-[18px]" />
