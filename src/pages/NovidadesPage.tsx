@@ -2,26 +2,30 @@ import { useParams } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProductCard from "@/components/product/ProductCard";
-import { mockProducts } from "@/data/mockData";
+import { lancamentos, outonoinverno, maisVendidos, allProducts } from "@/data/mockData";
 
-const subPageInfo: Record<string, { title: string; description: string }> = {
+const subPageInfo: Record<string, { title: string; description: string; products: typeof allProducts }> = {
   lancamentos: {
     title: "Lançamentos",
     description: "As peças mais recentes da Ecto, pensadas para o seu corpo.",
+    products: lancamentos,
   },
   "outono-inverno": {
     title: "Coleção Outono/Inverno",
     description: "Peças sofisticadas e aconchegantes para os dias mais frios.",
+    products: outonoinverno,
   },
   "mais-vendidos": {
     title: "Mais Vendidos",
     description: "Os favoritos das nossas clientes — aprovados por quem veste PP, 32 e 34.",
+    products: maisVendidos,
   },
 };
 
 const NovidadesPage = () => {
   const { sub } = useParams();
   const info = sub ? subPageInfo[sub] : null;
+  const products = info?.products ?? allProducts.slice(0, 8);
 
   return (
     <div className="min-h-screen bg-background">
@@ -34,7 +38,7 @@ const NovidadesPage = () => {
           {info?.description ?? "Descubra as últimas novidades da Ecto."}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {mockProducts.map((product) => (
+          {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

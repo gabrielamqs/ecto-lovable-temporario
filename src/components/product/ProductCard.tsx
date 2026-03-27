@@ -11,16 +11,13 @@ export interface Product {
   hoverImage?: string;
   sizes: string[];
   isNew?: boolean;
+  category?: string;
 }
 
 interface ProductCardProps {
   product: Product;
 }
 
-/**
- * ProductCard — SRP: Display-only card for product listing.
- * DRY: Reused in grids, carousels, and search results.
- */
 const ProductCard = ({ product }: ProductCardProps) => {
   const [liked, setLiked] = useState(false);
   const [hovered, setHovered] = useState(false);
@@ -41,25 +38,18 @@ const ProductCard = ({ product }: ProductCardProps) => {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
-
         {product.isNew && (
           <span className="absolute top-3 left-3 bg-foreground text-primary-foreground font-body text-[9px] tracking-[0.2em] uppercase px-2.5 py-1">
             Novo
           </span>
         )}
-
         <button
-          onClick={(e) => {
-            e.preventDefault();
-            setLiked(!liked);
-          }}
+          onClick={(e) => { e.preventDefault(); setLiked(!liked); }}
           className="absolute top-3 right-3 p-2 bg-surface/80 backdrop-blur-sm hover:bg-surface transition-colors"
           aria-label="Adicionar aos favoritos"
         >
           <Heart className={`w-4 h-4 ${liked ? "fill-rose-dark text-rose-dark" : "text-foreground/60"}`} />
         </button>
-
-        {/* Quick sizes on hover */}
         <div className="absolute bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-sm py-2 px-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
           <div className="flex justify-center gap-2">
             {product.sizes.map((s) => (
@@ -68,7 +58,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </div>
         </div>
       </Link>
-
       <div className="mt-3">
         <Link to={`/produto/${product.id}`}>
           <h3 className="font-body text-sm font-normal leading-tight">{product.name}</h3>
