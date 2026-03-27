@@ -1,7 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProductCard from "@/components/product/ProductCard";
-import { mockProducts } from "@/data/mockData";
+import { allProducts } from "@/data/mockData";
 
 const RoupasPage = () => {
   return (
@@ -13,7 +13,7 @@ const RoupasPage = () => {
           Peças com modelagem exclusiva para tamanhos PP, 32 e 34.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {mockProducts.map((product) => (
+          {allProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
