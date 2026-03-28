@@ -13,10 +13,14 @@ const Footer = () => (
         <div>
           <h4 className="font-body text-xs tracking-[0.2em] uppercase mb-4">Institucional</h4>
           <ul className="space-y-2.5">
-            {["Sobre Nós", "FAQ", "Trocas & Devoluções", "Fale Conosco"].map((item) => (
-              <li key={item}>
-                <Link to="#" className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                  {item}
+            {[
+              { label: "Sobre Nós", href: "/atendimento/sobre" },
+              { label: "FAQ", href: "/atendimento/faq" },
+              { label: "Fale Conosco", href: "/atendimento/contato" },
+            ].map((item) => (
+              <li key={item.label}>
+                <Link to={item.href} className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                  {item.label}
                 </Link>
               </li>
             ))}
@@ -25,22 +29,31 @@ const Footer = () => (
         <div>
           <h4 className="font-body text-xs tracking-[0.2em] uppercase mb-4">Categorias</h4>
           <ul className="space-y-2.5">
-            {["Vestidos", "Blusas", "Calças Ecto Fit", "Acessórios"].map((item) => (
-              <li key={item}>
-                <Link to="#" className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                  {item}
+            {[
+              { label: "Vestidos", href: "/roupas/vestidos" },
+              { label: "Blusas", href: "/roupas/blusas-camisas" },
+              { label: "Calças Ecto Fit", href: "/roupas/calcas-jeans" },
+              { label: "Acessórios", href: "/calcados-acessorios" },
+            ].map((item) => (
+              <li key={item.label}>
+                <Link to={item.href} className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                  {item.label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h4 className="font-body text-xs tracking-[0.2em] uppercase mb-4">Conta</h4>
+          <h4 className="font-body text-xs tracking-[0.2em] uppercase mb-4">Políticas</h4>
           <ul className="space-y-2.5">
-            {["Meus Pedidos", "Lista de Desejos", "Meus Dados"].map((item) => (
-              <li key={item}>
-                <Link to="#" className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                  {item}
+            {[
+              { label: "Política de Entrega", href: "/politica-entrega" },
+              { label: "Trocas e Devoluções", href: "/atendimento/trocas-devolucoes" },
+              { label: "Termos de Uso", href: "/termos-de-uso" },
+            ].map((item) => (
+              <li key={item.label}>
+                <Link to={item.href} className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                  {item.label}
                 </Link>
               </li>
             ))}

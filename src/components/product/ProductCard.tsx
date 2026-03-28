@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export interface Product {
   id: string;
   name: string;
+  description?: string;
   price: number;
   originalPrice?: number;
   image: string;
@@ -62,6 +63,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <Link to={`/produto/${product.id}`}>
           <h3 className="font-body text-sm font-normal leading-tight">{product.name}</h3>
         </Link>
+        {product.description && (
+          <p className="font-body text-xs text-muted-foreground mt-0.5 line-clamp-1">{product.description}</p>
+        )}
         <div className="flex items-center gap-2 mt-1">
           {product.originalPrice && (
             <span className="font-body text-xs text-muted-foreground line-through">

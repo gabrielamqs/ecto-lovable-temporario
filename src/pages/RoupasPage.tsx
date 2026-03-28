@@ -3,7 +3,11 @@ import Footer from "@/components/layout/Footer";
 import ProductCard from "@/components/product/ProductCard";
 import { allProducts } from "@/data/mockData";
 
+const clothingCategories = ["vestidos", "blusas-camisas", "calcas-jeans", "saias-shorts", "casacos-jaquetas", "conjuntos"];
+
 const RoupasPage = () => {
+  const clothingProducts = allProducts.filter((p) => clothingCategories.includes(p.category || ""));
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -13,7 +17,7 @@ const RoupasPage = () => {
           Peças com modelagem exclusiva para tamanhos PP, 32 e 34.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {allProducts.map((product) => (
+          {clothingProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartProvider } from "@/contexts/CartContext";
 import CartDrawer from "@/components/cart/CartDrawer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
 import ProductPage from "./pages/ProductPage";
 import RoupasPage from "./pages/RoupasPage";
@@ -17,6 +18,8 @@ import ContatoPage from "./pages/ContatoPage";
 import TrocasPage from "./pages/TrocasPage";
 import SobreNosPage from "./pages/SobreNosPage";
 import ContaPage from "./pages/ContaPage";
+import PoliticaEntregaPage from "./pages/PoliticaEntregaPage";
+import TermosUsoPage from "./pages/TermosUsoPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +32,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <CartDrawer />
+          <WhatsAppButton />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/produto/:id" element={<ProductPage />} />
@@ -42,8 +46,11 @@ const App = () => (
             <Route path="/atendimento/trocas-devolucoes" element={<TrocasPage />} />
             <Route path="/atendimento/sobre" element={<SobreNosPage />} />
             <Route path="/conta" element={<ContaPage />} />
+            <Route path="/conta/:sub" element={<ContaPage />} />
             <Route path="/novidades" element={<NovidadesPage />} />
             <Route path="/novidades/:sub" element={<NovidadesPage />} />
+            <Route path="/politica-entrega" element={<PoliticaEntregaPage />} />
+            <Route path="/termos-de-uso" element={<TermosUsoPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

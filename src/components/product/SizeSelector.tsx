@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface Size {
   label: string;
   available: boolean;
@@ -9,19 +11,18 @@ interface SizeSelectorProps {
   onSelect: (size: string) => void;
 }
 
-/**
- * SizeSelector — SRP: Only handles size selection UI.
- * DRY: Reusable across any product page or quick-view modal.
- */
 const SizeSelector = ({ sizes, selected, onSelect }: SizeSelectorProps) => (
   <div>
     <div className="flex items-center justify-between mb-3">
       <span className="font-body text-xs tracking-[0.15em] uppercase font-medium">
         Tamanho {selected && `— ${selected}`}
       </span>
-      <button className="font-body text-xs text-rose-dark underline underline-offset-2 hover:opacity-70 transition-opacity">
+      <Link
+        to="/atendimento/guia-tamanhos"
+        className="font-body text-xs text-rose-dark underline underline-offset-2 hover:opacity-70 transition-opacity"
+      >
         Guia de medidas
-      </button>
+      </Link>
     </div>
     <div className="flex flex-wrap gap-2">
       {sizes.map((size) => (

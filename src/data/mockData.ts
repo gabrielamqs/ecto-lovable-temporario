@@ -21,43 +21,43 @@ import biju4 from "@/assets/biju-4.jpg";
 // ── Produtos ──────────────────────────────────────────────
 export const allProducts: Product[] = [
   // Roupas
-  { id: "blazer-alfaiataria", name: "Blazer Alfaiataria Slim", price: 289.90, originalPrice: 349.90, image: product1, sizes: ["PP", "32", "34"], isNew: true, category: "casacos-jaquetas" },
-  { id: "vestido-midi", name: "Vestido Midi Alças Finas", price: 199.90, image: product2, sizes: ["PP", "32", "34"], isNew: true, category: "vestidos" },
-  { id: "calca-ecto-fit", name: "Calça Jeans Ecto Fit Skinny", price: 229.90, image: product3, sizes: ["32", "34"], category: "calcas-jeans" },
-  { id: "camisa-seda", name: "Camisa de Seda com Cinto", price: 259.90, originalPrice: 319.90, image: product4, sizes: ["PP", "32", "34"], category: "blusas-camisas" },
-  { id: "vestido-curto-linho", name: "Vestido Curto em Linho", price: 179.90, image: product2, sizes: ["PP", "32"], isNew: true, category: "vestidos" },
-  { id: "blusa-cropped-canelada", name: "Blusa Cropped Canelada", price: 89.90, image: product4, sizes: ["PP", "32", "34"], category: "blusas-camisas" },
-  { id: "saia-midi-plissada", name: "Saia Midi Plissada", price: 159.90, image: product2, sizes: ["PP", "32", "34"], category: "saias-shorts" },
-  { id: "short-alfaiataria", name: "Short Alfaiataria Cintura Alta", price: 139.90, originalPrice: 169.90, image: product3, sizes: ["PP", "32"], category: "saias-shorts" },
-  { id: "jaqueta-couro-eco", name: "Jaqueta de Couro Ecológico", price: 349.90, image: product1, sizes: ["PP", "32", "34"], isNew: true, category: "casacos-jaquetas" },
-  { id: "conjunto-tricot", name: "Conjunto Tricot Calça e Blusa", price: 279.90, originalPrice: 329.90, image: product4, sizes: ["PP", "32"], category: "conjuntos" },
-  { id: "calca-wide-leg", name: "Calça Wide Leg Alfaiataria", price: 219.90, image: product3, sizes: ["PP", "32", "34"], category: "calcas-jeans" },
-  { id: "vestido-longo-cetim", name: "Vestido Longo Cetim", price: 329.90, image: product2, sizes: ["32", "34"], isNew: true, category: "vestidos" },
-  { id: "blusa-manga-bufante", name: "Blusa Manga Bufante", price: 119.90, image: product4, sizes: ["PP", "32", "34"], category: "blusas-camisas" },
-  { id: "conjunto-saia-top", name: "Conjunto Saia e Top Linho", price: 249.90, image: product2, sizes: ["PP", "32"], category: "conjuntos" },
-  { id: "trench-coat-classico", name: "Trench Coat Clássico", price: 399.90, originalPrice: 459.90, image: product1, sizes: ["PP", "32", "34"], category: "casacos-jaquetas" },
-  { id: "saia-mini-jeans", name: "Saia Mini Jeans", price: 129.90, image: product3, sizes: ["PP", "32", "34"], category: "saias-shorts" },
+  { id: "blazer-alfaiataria", name: "Blazer Alfaiataria Slim", description: "Corte reto com ombros ajustados e forro acetinado", price: 289.90, originalPrice: 349.90, image: product1, sizes: ["PP", "32", "34"], isNew: true, category: "casacos-jaquetas" },
+  { id: "vestido-midi", name: "Vestido Midi Alças Finas", description: "Tecido fluido com caimento elegante abaixo do joelho", price: 199.90, image: product2, sizes: ["PP", "32", "34"], isNew: true, category: "vestidos" },
+  { id: "calca-ecto-fit", name: "Calça Jeans Ecto Fit Skinny", description: "Modelagem exclusiva para cintura e quadril estreitos", price: 229.90, image: product3, sizes: ["32", "34"], category: "calcas-jeans" },
+  { id: "camisa-seda", name: "Camisa de Seda com Cinto", description: "Seda natural com cinto removível na cintura", price: 259.90, originalPrice: 319.90, image: product4, sizes: ["PP", "32", "34"], category: "blusas-camisas" },
+  { id: "vestido-curto-linho", name: "Vestido Curto em Linho", description: "Linho leve ideal para dias quentes, corte evasê", price: 179.90, image: product2, sizes: ["PP", "32"], isNew: true, category: "vestidos" },
+  { id: "blusa-cropped-canelada", name: "Blusa Cropped Canelada", description: "Malha canelada com comprimento ideal para cintura alta", price: 89.90, image: product4, sizes: ["PP", "32", "34"], category: "blusas-camisas" },
+  { id: "saia-midi-plissada", name: "Saia Midi Plissada", description: "Plissado fino com cintura elástica e forro", price: 159.90, image: product2, sizes: ["PP", "32", "34"], category: "saias-shorts" },
+  { id: "short-alfaiataria", name: "Short Alfaiataria Cintura Alta", description: "Alfaiataria leve com pregas frontais e bolsos", price: 139.90, originalPrice: 169.90, image: product3, sizes: ["PP", "32"], category: "saias-shorts" },
+  { id: "jaqueta-couro-eco", name: "Jaqueta de Couro Ecológico", description: "Couro vegano macio com zíperes metálicos", price: 349.90, image: product1, sizes: ["PP", "32", "34"], isNew: true, category: "casacos-jaquetas" },
+  { id: "conjunto-tricot", name: "Conjunto Tricot Calça e Blusa", description: "Tricot macio em conjunto coordenado para inverno", price: 279.90, originalPrice: 329.90, image: product4, sizes: ["PP", "32"], category: "conjuntos" },
+  { id: "calca-wide-leg", name: "Calça Wide Leg Alfaiataria", description: "Perna ampla com vinco marcado e tecido encorpado", price: 219.90, image: product3, sizes: ["PP", "32", "34"], category: "calcas-jeans" },
+  { id: "vestido-longo-cetim", name: "Vestido Longo Cetim", description: "Cetim brilhante com decote V e fenda lateral", price: 329.90, image: product2, sizes: ["32", "34"], isNew: true, category: "vestidos" },
+  { id: "blusa-manga-bufante", name: "Blusa Manga Bufante", description: "Mangas volumosas com punho ajustado e tecido leve", price: 119.90, image: product4, sizes: ["PP", "32", "34"], category: "blusas-camisas" },
+  { id: "conjunto-saia-top", name: "Conjunto Saia e Top Linho", description: "Top cropped e saia midi em linho puro", price: 249.90, image: product2, sizes: ["PP", "32"], category: "conjuntos" },
+  { id: "trench-coat-classico", name: "Trench Coat Clássico", description: "Gabardine impermeável com cinto e lapelas", price: 399.90, originalPrice: 459.90, image: product1, sizes: ["PP", "32", "34"], category: "casacos-jaquetas" },
+  { id: "saia-mini-jeans", name: "Saia Mini Jeans", description: "Jeans stretch com barra desfiada e bolsos traseiros", price: 129.90, image: product3, sizes: ["PP", "32", "34"], category: "saias-shorts" },
 
   // Sapatos
-  { id: "sapatilha-bico-fino", name: "Sapatilha Bico Fino Nude", price: 179.90, image: sapato1, sizes: ["33", "34", "35"], category: "sapatos" },
-  { id: "sandalia-salto-bloco", name: "Sandália Salto Bloco Preta", price: 219.90, originalPrice: 269.90, image: sapato2, sizes: ["33", "34", "35"], isNew: true, category: "sapatos" },
-  { id: "tenis-couro-branco", name: "Tênis Couro Branco Minimal", price: 199.90, image: sapato3, sizes: ["33", "34", "35"], category: "sapatos" },
+  { id: "sapatilha-bico-fino", name: "Sapatilha Bico Fino Nude", description: "Couro sintético macio com palmilha acolchoada", price: 179.90, image: sapato1, sizes: ["33", "34", "35"], category: "sapatos" },
+  { id: "sandalia-salto-bloco", name: "Sandália Salto Bloco Preta", description: "Salto 6cm bloco com tiras ajustáveis no tornozelo", price: 219.90, originalPrice: 269.90, image: sapato2, sizes: ["33", "34", "35"], isNew: true, category: "sapatos" },
+  { id: "tenis-couro-branco", name: "Tênis Couro Branco Minimal", description: "Couro legítimo com solado emborrachado e cadarço fino", price: 199.90, image: sapato3, sizes: ["33", "34", "35"], category: "sapatos" },
 
   // Bolsas
-  { id: "bolsa-estruturada-camel", name: "Bolsa Estruturada Camel", price: 289.90, image: bolsa1, sizes: ["Único"], category: "bolsas" },
-  { id: "bolsa-crossbody-preta", name: "Bolsa Crossbody Corrente Dourada", price: 239.90, originalPrice: 289.90, image: bolsa2, sizes: ["Único"], isNew: true, category: "bolsas" },
-  { id: "clutch-palha-natural", name: "Clutch Palha Natural", price: 149.90, image: bolsa3, sizes: ["Único"], category: "bolsas" },
+  { id: "bolsa-estruturada-camel", name: "Bolsa Estruturada Camel", description: "Couro ecológico rígido com alça de mão e transversal", price: 289.90, image: bolsa1, sizes: ["Único"], category: "bolsas" },
+  { id: "bolsa-crossbody-preta", name: "Bolsa Crossbody Corrente Dourada", description: "Compacta com corrente dourada removível e fecho magnético", price: 239.90, originalPrice: 289.90, image: bolsa2, sizes: ["Único"], isNew: true, category: "bolsas" },
+  { id: "clutch-palha-natural", name: "Clutch Palha Natural", description: "Palha trançada artesanal com fecho de pressão", price: 149.90, image: bolsa3, sizes: ["Único"], category: "bolsas" },
 
   // Cintos
-  { id: "cinto-couro-marrom", name: "Cinto Couro Fino Marrom", price: 89.90, image: cinto1, sizes: ["PP", "P"], category: "cintos" },
-  { id: "cinto-trancado-preto", name: "Cinto Trançado Preto Ajustável", price: 99.90, image: cinto2, sizes: ["PP", "P"], category: "cintos" },
-  { id: "cinto-camurca-camel", name: "Cinto Camurça Fivela Dourada", price: 109.90, originalPrice: 129.90, image: cinto3, sizes: ["PP", "P"], isNew: true, category: "cintos" },
+  { id: "cinto-couro-marrom", name: "Cinto Couro Fino Marrom", description: "Couro legítimo 2cm com fivela oval dourada", price: 89.90, image: cinto1, sizes: ["PP", "P"], category: "cintos" },
+  { id: "cinto-trancado-preto", name: "Cinto Trançado Preto Ajustável", description: "Trama artesanal em couro ecológico sem furos", price: 99.90, image: cinto2, sizes: ["PP", "P"], category: "cintos" },
+  { id: "cinto-camurca-camel", name: "Cinto Camurça Fivela Dourada", description: "Camurça macia com fivela retangular banhada a ouro", price: 109.90, originalPrice: 129.90, image: cinto3, sizes: ["PP", "P"], isNew: true, category: "cintos" },
 
   // Bijuterias
-  { id: "brinco-argola-dourada", name: "Brinco Argola Dourada Clássica", price: 49.90, image: biju1, sizes: ["Único"], category: "bijuterias" },
-  { id: "colar-correntes-camadas", name: "Colar Correntes em Camadas", price: 69.90, image: biju2, sizes: ["Único"], isNew: true, category: "bijuterias" },
-  { id: "brinco-perola-classico", name: "Brinco Pérola Clássico", price: 39.90, image: biju3, sizes: ["Único"], category: "bijuterias" },
-  { id: "conjunto-aneis-dourados", name: "Conjunto Anéis Dourados", price: 59.90, originalPrice: 79.90, image: biju4, sizes: ["Único"], category: "bijuterias" },
+  { id: "brinco-argola-dourada", name: "Brinco Argola Dourada Clássica", description: "Banho de ouro 18k antialérgico, diâmetro 3cm", price: 49.90, image: biju1, sizes: ["Único"], category: "bijuterias" },
+  { id: "colar-correntes-camadas", name: "Colar Correntes em Camadas", description: "Três correntes em comprimentos diferentes com pingentes", price: 69.90, image: biju2, sizes: ["Único"], isNew: true, category: "bijuterias" },
+  { id: "brinco-perola-classico", name: "Brinco Pérola Clássico", description: "Pérola de água doce 8mm com tarraxa de pressão", price: 39.90, image: biju3, sizes: ["Único"], category: "bijuterias" },
+  { id: "conjunto-aneis-dourados", name: "Conjunto Anéis Dourados", description: "5 anéis em banho de ouro com designs variados", price: 59.90, originalPrice: 79.90, image: biju4, sizes: ["Único"], category: "bijuterias" },
 ];
 
 // Backwards-compatible export
